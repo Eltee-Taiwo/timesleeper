@@ -1,17 +1,253 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <title>Time Sleeper - The movie</title>
+    <link rel="icon" type="image/jpg" href="./content/images/favicon.JPG">
+    <link rel="stylesheet" href="./content/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="./content/styles/font-awesome.min.css">
+    <link rel="stylesheet" href="./content/toast.css" />
+    <link rel="stylesheet" href="./content/site.css">
+    <script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script>
+    <script src="./content/scripts/jquery-1.10.2.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400" rel="stylesheet">
 </head>
 
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
+    <div class="navigationArea">
+        <div id="LogoDiv">
+            <a href="#"><img class="desktop" src="./content/images/textLogo.png" alt="Logo"></a>
+            <a href="#"><img class="mobile" src="./content/images/textLogo.png" alt="Logo"></a>
+
+        </div>
+        <div id="NavbarCollapseDiv">
+            <button type="button" onclick="ToggleMenuVisibility()">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </button>
+        </div>
+
+
+        <div id="MenuDiv">
+            <ul class="menu">
+                <li><a href="#Trailer">Home</a></li>
+                <li><a href="#About">Synopsis</a></li>
+                <li><a href="#Cast">Cast</a></li>
+                <li><a href="#Crew">Crew</a></li>
+                <li><a href="#Gallery">Gallery</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="body-content" style="margin-top: 0px;">
+        <div class="container">
+            <section id="Trailer">
+                <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/539359307?autoplay=1&color=ff0179"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0"
+                            allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+                <p>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </p>
+                <ul id="MovieButtonList" class="text-center">
+                    <li class="movieButton">
+                        <a id="RentButton" href="https://vimeo.com/store/ondemand/rent/326270" target="_blank" rel="noopener">
+                            <div class="movieButton-container">
+                                <svg class="vod-rent-icon" viewBox="0 0 32 32" focusable="false">
+                                    <path class="fill" d="M23 11H9c-.552 0-1 .448-1 1v8c0 .552.448 1 1 1h14c.552 0 1-.448 1-1v-8c0-.552-.448-1-1-1z">
+                                    </path>
+                                    <path class="fill"
+                                          d="M32 22V10c-2.76 0-5-2.24-5-5H5c0 2.76-2.24 5-5 5v12c2.76 0 5 2.24 5 5h22c0-2.76 2.24-5 5-5zm-6-1c0 1.105-.895 2-2 2H8c-1.105 0-2-.895-2-2V11c0-1.105.895-2 2-2h16c1.105 0 2 .895 2 2v10z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p>Rent CA$3.00 <br /> <span>72-hour streaming period</span></p>
+                        </a>
+                    </li>
+                    <li class="movieButton">
+                        <a id="BuyButton" href="https://vimeo.com/store/ondemand/buy/326270" target="_blank" rel="noopener">
+                            <div class="movieButton-container">
+                                <svg class="vod-download-icon" viewBox="0 0 32 32" focusable="false">
+                                    <path class="fill"
+                                          d="M21.707 24.707l-5 5c-.39.39-1.024.39-1.414 0l-5-5c-.39-.39-.39-1.024 0-1.414l1.06-1.06c.392-.392 1.025-.392 1.415 0L14 23.462V15c0-.552.448-1 1-1h2c.552 0 1 .448 1 1v8.464l1.232-1.232c.39-.39 1.024-.39 1.414 0l1.06 1.06c.392.39.392 1.025 0 1.415z">
+                                    </path>
+                                    <path class="fill"
+                                          d="M27.894 12.31c.063-.43.106-.864.106-1.31 0-4.97-4.03-9-9-9-3.6 0-6.7 2.12-8.138 5.175C10.175 6.75 9.368 6.5 8.5 6.5 6.015 6.5 4 8.515 4 11c0 .445.067.874.187 1.28C1.76 13.05 0 15.318 0 18c0 3.314 2.686 6 6 6h1c0-2.42 1.718-4.436 4-4.9V15c0-2.21 1.79-4 4-4h2c2.21 0 4 1.79 4 4v4.1c2.282.464 4 2.48 4 4.9h1c3.314 0 6-2.686 6-6 0-2.65-1.72-4.896-4.106-5.69z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <p>Buy CA$8.00 <br /> <span>Stream + download anytime</span></p>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+        </section>
+        <section id="About">
+            <div class="row">
+                <div class="col-sm-12">
+                    <span id="ScrollIndicator"></span>
+                    <h1 class="heading synopsis-heading">Synopsis</h1>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3">
+                    <p class="synopsis">
+                        Sarah, upon accidentally discovering time travel through the use of a drug, must now travel back one year into the past to
+                        save
+                        her son from a fatal accident.
+                        <strong>TIME SLEEPER</strong> is an intimate Sci-Fi drama about what it means to seek and accept true forgiveness.
+                    </p>
+                    <div id="PosterDiv">
+                        <img src="./content/images/Poster.jpg" alt="Movie Poster" />
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="ParallaxImage"></div>
+
+    <div class="container">
+
+        <section id="Cast">
+            <h1 class="heading">Cast</h1>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="col-sm-4">
+                        <img src="./content/images/TS_Gloria.png" alt="Cast Name" />
+                        <div class="crew">
+                            <p class="border"></p><span class="name">Glorya Thompson</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="./content/images/TS_Jude.png" alt="Cast Name" />
+                        <div class="crew">
+                            <p class="border"></p><span class="name">Antonius Hackett</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="Crew">
+            <div class="row">
+                <h1 class="heading">Crew</h1>
+                <div class="col-sm-12">
+                    <div class="col-sm-3 crew">
+                        <p class="border"></p><span class="name">Bisong Taiwo</span><br /><span class="job">Writer/Director/Producer</span>
+                    </div>
+                    <div class="col-sm-3 crew">
+                        <p class="border"></p><span class="name">AnkaraLoving</span><br /><span class="job">Costume Designer</span>
+                    </div>
+                    <div class="col-sm-3 crew">
+                        <p class="border"></p><span class="name">Felicheeta Artistry</span><br /><span class="job">Makeup</span>
+                    </div>
+                    <div class="col-sm-3 crew">
+                        <p class="border"></p><span class="name">Tom Koroluk</span><br /><span class="job">Music Composer</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <section id="Gallery" class="">
+        <div class="row">
+            <div id="GalleryContent">
+                <h1 class="heading">Gallery</h1>
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="col-sm-3">
+                            <div class="gallery-image-holder">
+                                <img alt="Gallery Image" src="./content/images/TS_Still1.png" class="gallery-image" data-slideshow-index="0" />
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="gallery-image-holder">
+                                <img alt="Gallery Image" src="./content/images/TS_Still2.png" class="gallery-image" data-slideshow-index="1" />
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="gallery-image-holder">
+                                <img alt="Gallery Image" src="./content/images/TS_Still3.png" class="gallery-image" data-slideshow-index="2" />
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="gallery-image-holder">
+                                <img alt="Gallery Image" src="./content/images/TS_Still4.png" class="gallery-image" data-slideshow-index="3" />
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="gallery-image-holder">
+                                <img alt="Gallery Image" src="./content/images/TS_Still5.png" class="gallery-image" data-slideshow-index="4" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="Contact">
+            <div class="row">
+                <div style="margin-top: 2em;" class="col-sm-8 col-sm-offset-2 text-center">
+                    <div id="EmailDiv">
+                        <h2>Enter your email to stay up to date on the film!</h2>
+                        <div class="row">
+                            <div class="col-sm-6 col-sm-offset-3">
+                                <form id="SubscribeForm">
+                                    <input id="Email" name="Email" type="email" class="form-control" placeholder="Enter Email Address" />
+                                    <p id="ErrorMessage" class="hidden">Please enter a valid email address</p>
+                                    <br />
+                                    <button id="EmailSubscribe" type="submit" class="btn btn-default">SUBSCRIBE</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="EmailLoadingDiv" class="hidden">
+                        <div class="text-center"><i class="fa fa-spinner fa-spin" style="font-size: 5em"></i></div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3">
+                    <h2>Follow Timesleeper the movie</h2>
+                    <p>
+                        <a target="_blank" href="https://www.facebook.com/timesleepermovie" rel="noopener"><i class="fa fa-facebook-square"
+                               style="font-size: 5em"></i></a><a target="_blank" href="https://www.instagram.com/timesleepermovie" rel="noopener"><i
+                               class="fa fa-instagram" style="font-size: 5em"></i></a><a target="_blank"
+                           href="https://www.twitter.com/timesleeperfilm" rel="noopener"><i class="fa fa-twitter-square"
+                               style="font-size: 5em"></i></a><a target="_blank" href="https://www.youtube.com/channel/UCBzmlJ4qx8bwV_7F8ZgnWTw"
+                           rel="noopener"><i class="fa fa-youtube-square" style="font-size: 5em"></i></a>
+                    </p>
+                </div>
+                <div class="col-sm-6 col-sm-offset-3">
+                    <a id="PressJunket" type="submit" class="btn btn-default" href="https://eltee27.com/cdn/files/timesleeper_presskit.zip">Download
+                        Electronic Press Kit</a>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
+
+<footer>
+    <p>© 2018 - Designed by <a href="https://eltee27.com" target="_blank">Eltee</a></p>
+    <script src="./content/scripts/bootstrap.min.js"></script>
+    <script src="./content/scripts/smoothScroll.js"></script>
+    <script src="./content/scripts/toastr.js"></script>
+    <script src="./content/scripts/modal.js"></script>
+    <script src="./content/scripts/site.js"></script>
+    <script src="./content/scripts/gallery.js"></script>
+    <script src="./content/scripts/contact.js"></script>
+
+    <div class="modal fade" id="lightbox" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <img id="LightboxImage" alt="Slideshow Image">
+                <div id="loadingDiv" class="hidden">
+                    <div class="text-center"><i class="fa fa-spinner fa-spin" style="font-size: 5em"></i></div>
+                </div>
+            </div>
+        </div>
+        <button id="PreviousImageButton" onclick="nextImage(-1)" class="left">&lt;</button>
+        <button id="NextImageButton" onclick="nextImage(1)" class="right">&gt;</button>
+    </div>
+</footer>
 
 </html>
